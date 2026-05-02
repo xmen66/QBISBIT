@@ -6,6 +6,7 @@ const team = [
     role: 'Chief Executive Officer',
     short: 'CEO',
     desc: 'Visionary leader driving Q BISBIT\'s strategy, partnerships, and company formation at scale.',
+    image: '/shahzad hussain.jpeg',
     initials: 'SH',
     color: '#38bdf8',
     glow: 'rgba(56,189,248,0.12)',
@@ -16,6 +17,7 @@ const team = [
     role: 'President',
     short: 'President',
     desc: 'Oversees organizational operations, student engagement, and ecosystem growth across all wings.',
+    image: '/hashir-khan.jpeg',
     initials: 'HK',
     color: '#06b6d4',
     glow: 'rgba(6,182,212,0.12)',
@@ -26,6 +28,7 @@ const team = [
     role: 'Technical Director',
     short: 'CTO',
     desc: 'Leads the Tech Wing, sets engineering standards, and oversees all product development and architecture.',
+    image: '/m-ahtisham.jpeg',
     initials: 'MA',
     color: '#818cf8',
     glow: 'rgba(129,140,248,0.12)',
@@ -36,6 +39,7 @@ const team = [
     role: 'Growth Lead',
     short: 'Growth',
     desc: 'Drives marketing strategy, brand development, and community growth for Q BISBIT and its portfolio companies.',
+    image: '/mehwish-rahim.jpeg',
     initials: 'MR',
     color: '#f472b6',
     glow: 'rgba(244,114,182,0.12)',
@@ -94,10 +98,23 @@ export default function Team() {
               >
                 {/* Avatar */}
                 <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center text-xl font-black mx-auto mb-4 transition-transform duration-300 group-hover:-translate-y-1"
-                  style={{ background: member.glow, border: `1px solid ${member.border}`, color: member.color }}
+                  className="w-16 h-16 rounded-2xl mx-auto mb-4 overflow-hidden transition-transform duration-300 group-hover:-translate-y-1 flex items-center justify-center"
+                  style={{ border: `1px solid ${member.border}` }}
                 >
-                  {member.initials}
+                  {member.image ? (
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full flex items-center justify-center text-xl font-black"
+                      style={{ background: member.glow, color: member.color }}
+                    >
+                      {member.initials}
+                    </div>
+                  )}
                 </div>
 
                 {/* Role badge */}
