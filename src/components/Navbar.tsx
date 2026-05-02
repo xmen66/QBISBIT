@@ -38,8 +38,12 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <a href="#" className="flex items-center gap-2.5 group">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-sky-500/30">
-                <span className="text-black font-black text-sm">Q</span>
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center shadow-lg shadow-sky-500/30 overflow-hidden">
+                <img 
+                  src="/Q_BISBIT LOGO.png" 
+                  alt="Q BISBIT Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="font-bold text-white text-base sm:text-lg tracking-tight">
                 Q BISBIT
@@ -65,7 +69,7 @@ export default function Navbar() {
                 href={GOOGLE_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2 rounded-full text-sm font-semibold bg-sky-500 hover:bg-sky-400 text-black transition-all duration-200 shadow-lg shadow-sky-500/30 hover:shadow-sky-400/50 hover:scale-105 active:scale-95"
+                className="px-5 py-2 rounded-full text-sm font-semibold bg-sky-500 hover:bg-sky-400 text-black transition-all duration-200 shadow-lg shadow-sky-500/30 hover:shadow-sky-400/50"
               >
                 Join Now
               </a>
